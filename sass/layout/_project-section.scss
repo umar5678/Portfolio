@@ -1,0 +1,101 @@
+@use "../globals/variables" as v;
+@use "../globals/mixins" as m;
+.project-section{
+    margin-top: 2rem;
+}
+.project-nav{
+    @include m.common;
+    h1{
+        font-size: 18px;
+        color: v.$grey-4;
+        font-weight: 500;
+    }
+    .items{
+        margin-top: 10px;
+        display: flex;
+        flex-direction: row;
+        gap: .5rem;
+        flex-wrap: wrap;
+        .item{
+            padding: 8px 16px;
+            border: 1px solid v.$grey-4;
+            border-radius: 12px;
+            font-size: 14px;
+            color: v.$grey-4;
+            margin: 0 2px;
+
+            &:hover{
+                color: v.$white;
+                background-color: v.$blue;
+                border: 1px solid v.$blue;
+                transition: all 0.3s ease;
+            }
+           
+        }
+        .active{
+            color: v.$white;
+            background-color: v.$blue;
+            border: 1px solid v.$blue;
+        }
+    }
+
+}
+
+
+.projects{
+    margin: 2rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.6vw;
+    .card{
+        max-width: 324px;
+        background-color: v.$white;
+        border-radius: 12px;
+        padding: 18px 18px 33px 18px;
+        img{
+            border-radius: 12px;
+        }
+        span{
+            color: v.$grey-4;
+            font-weight: 500;
+            display: inline-block;
+            padding: 18px 10px 10px 0px;
+        }
+        h1{
+            color: v.$grey-5;
+            font-weight: 500;
+            font-size: 24px;
+        }
+        p{
+            color: v.$grey-3;
+            margin: 18px 0;
+        }
+        .demo-btn{
+            font-size: 18px;
+            color: v.$white;
+            padding: 12px 38px;
+            background-color: v.$blue;
+            border: none;
+            border-radius: 12px;
+            text-decoration: none;
+        }
+        .code-btn{
+            font-size: 18px;
+            color: v.$blue;
+            padding: 12px 38px;
+            background-color: v.$white;
+            border: 1px solid v.$blue;
+            border-radius: 12px;
+            margin-left: 6px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+    }
+    .hide{
+        display: none;
+    }
+    .show{
+        animation: animate 0.4s ease;
+      }
+   
+}

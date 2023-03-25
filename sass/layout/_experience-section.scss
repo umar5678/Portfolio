@@ -1,0 +1,35 @@
+@use "../globals/variables" as v;
+@use "../globals//mixins" as m;
+
+.experience-section{
+    @include m.common;
+    h2{
+        font-weight: 500;
+        color: v.$grey-4;
+        font-size: 24px;
+    }
+}
+
+.experience{
+    display: flex;
+    gap: 2rem;
+    margin: 3rem 0 2rem 0;
+    img{
+        max-width: 100px;
+    }
+    p{
+        font-size: 14px;
+        color: v.$grey-3;
+        font-weight: 500;
+    }
+    h2{
+        color: v.$grey-5;
+        font-size: 16px;
+        font-weight: 500;
+    }
+    article{
+        color: v.$grey-3;
+        font-weight: 500;
+        margin-top: 2rem;
+    }
+}

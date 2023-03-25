@@ -1,0 +1,22 @@
+@use "../globals/variables" as v;
+
+@mixin common{
+    padding: 22px;
+    background-color: v.$white;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+}
+
+@mixin tablet {
+    @media (max-width: v.$tablet) {
+        @content;
+    }
+}
+@keyframes animate {
+    0%{
+      transform: scale(0.5);
+    }
+    100%{
+      transform: scale(1);
+    }
+  }

@@ -1,0 +1,30 @@
+@use "../globals/variables" as v;
+@use "../globals/mixins" as m;
+
+.hobbies-section{
+    @include m.common;
+    h2{
+        color: v.$grey-4;
+        font-size: 24px;
+        font-weight: 500;
+        
+    }
+}
+.hobby{
+    margin: 2rem 0 0 0;
+    img{
+        border-radius: 12px;
+    }
+    h3{
+        margin: 1rem 0 0 0;
+        color: v.$grey-5;
+        font-size: 18px;
+        font-weight: 600;
+    }
+    p{
+        color: v.$grey-3;
+        margin: 10px 0 10px 0;
+        font-weight: 500;
+    }
+
+}

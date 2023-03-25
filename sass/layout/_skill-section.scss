@@ -1,0 +1,55 @@
+@use "../globals/variables" as v;
+@use "../globals/mixins" as m;
+
+
+.skill-section{
+   @include m.common;
+   h2{
+      color: v.$grey-4;
+      font-size: 18px;
+      font-weight: 700;
+   }
+   p{
+      color: v.$grey-4;
+      font-size: 16px;
+   }
+}
+.skill{
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   margin: 12px 0;
+   .skill-title{
+      font-size: 18px;
+   }
+   .skill-bar{
+      background-color: v.$grey-2;
+      height: 9px;
+      width: 220px;
+      border-radius: 12px;
+      .bar-progress{
+         height: 9px;
+         border-radius: 12px;
+         background: v.$blue;
+      }
+      
+   }
+   .react{
+      width: 70%;
+   }
+   .javascript{
+      width: 80%;
+   }
+   .css{
+      width: 90%;
+   }
+   .vue{
+      width: 70%;
+   }
+   .redux{
+      width: 80%;
+   }
+   .react-native{
+      width: 90%;
+   }
+}

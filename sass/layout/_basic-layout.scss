@@ -1,0 +1,57 @@
+@use "../globals/variables" as v;
+@use "../globals/mixins" as m;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+article,
+a,
+span,button {
+  font-family: v.$montserrat;
+}
+
+body {
+  width: min(94vw, 1024px);
+  margin: 0 auto;
+  background: v.$grey-1;
+}
+
+.container {
+  margin: 2rem 0;
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 39% 58%;
+  grid-template-areas:
+    "i j"
+    "k j"
+    "k l";
+}
+.blog-section {
+  grid-area: j;
+}
+
+.skill-section {
+  grid-area: i;
+}
+.experience-section {
+  grid-area: l;
+}
+.hobbies-section {
+  grid-area: k;
+}
+
+@include m.tablet {
+  .container {
+    display: block;
+    .skill-section,
+    .blog-section,
+    .experience-section,
+    .hobbies-section {
+      margin: 1.6rem 0;
+    }
+  }
+}
